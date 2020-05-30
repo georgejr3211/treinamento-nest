@@ -1,0 +1,13 @@
+version: "3"
+services:
+  db1:
+    image: postgres:9.6
+    container_name: "postgres_02"
+    environment:
+      - POSTGRES_DB=lista_tarefas_db1
+      - POSTGRES_USER=nest
+      - POSTGRES_PASSWORD=nest
+    volumes:
+      - "./data/postgres:/var/lib/postgresql/data"
+    ports:
+      - 5433:5432
